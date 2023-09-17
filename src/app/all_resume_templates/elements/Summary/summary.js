@@ -12,7 +12,7 @@ export default function Summary() {
                     <IoIosContact size={35} className={Style.icon} />
                     ABOUT ME</div>
             </div>
-            <div className={Style.summary}>Lorem Ipsum.
+            <div className={Style.summary}>Lorem Ipsum
             </div>
         </div>
     )
