@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: auto;
+    margin: 5px;
+    padding: 10px;
+    font-size: large;
+}
+
+.title_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid;
+
+}
+
+.title_wrap:hover {
+    .button {
+        display: block;
+
+    }
+}
+
+.title {
+    display: flex;
+    font-weight: 800;
+    font-size: x-large;
+    margin-bottom: 2px;
+
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.button {
+    width: 40px;
+    height: 30px;
+    margin: 1px;
+    display: none;
+
+}
+
+/* .content {
+    display: flex;
+
+
+} */
+
+.content_with_border {
+    border-top: dotted;
+
+
+}
+
+.content_inside_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.content_inside_wrap:hover {
+    .delete_button {
+        display: block;
+    }
+}
+
+.inner_content {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.delete_button {
+    display: none;
+}
+
+.field {
+    margin: 5px 0px;
+    font-weight: 400;
+    font-size: larger;
+    margin-top: 10px;
+
+
+}
+
+.university {
+
+    margin: 5px 0px;
+    font-weight: 600;
+    font-size: larger;
+    margin-bottom: 10px;
+
+
+}
