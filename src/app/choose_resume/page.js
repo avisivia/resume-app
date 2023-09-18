@@ -12,7 +12,9 @@ const Select = () => {
                 <a href="/">
                     <div className={Style.logo}>
 
-                        <div className={Style.logo_image}><img src="/vercel.svg" alt="Picture of the author" /></div>
+                        <div className={Style.logo_image}>
+                            {/* <img src="/vercel.svg" alt="Picture of the author" /> */}
+                        </div>
                         <div className={Style.logo_text}>Resume Builder</div>
 
                     </div>

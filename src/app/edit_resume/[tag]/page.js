@@ -24,18 +24,26 @@ const Edit = () => {
                 <a href="/">
                     <div className={Style.logo}>
 
-                        <div className={Style.logo_image}><img src="/vercel.svg" alt="Picture of the author" /></div>
+                        <div className={Style.logo_image}>
+                            {/* <img src="/vercel.svg" alt="Picture of the author" /> */}
+                        </div>
                         <div className={Style.logo_text}>Resume Builder</div>
 
                     </div>
                 </a>
                 <div className={Style.head_line}></div>
             </div>
-            <div className={Style.edit_heading}>A4 Size CV</div>
+            <div className={Style.edit_heading}>
+                {/* A4 Size CV */}
+            </div>
             <div className={Style.body}>
-                <div className={Style.menu}>menu</div>
+                <div className={Style.menu}>
+                    {/* menu */}
+                </div>
                 <div><Edit_component /></div>
-                <div className={Style.options}>options</div>
+                <div className={Style.options}>
+                    {/* options */}
+                </div>
 
             </div>
         </div>
