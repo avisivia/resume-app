@@ -36,14 +36,14 @@ const Select = () => {
                             alt="Resume builder"
                         />
                     </a>
-                    <img
+                    {/* <img
                         src="/home_page_image.webp"
                         alt="Resume builder"
                     />
                     <img
                         src="/home_page_image.webp"
                         alt="Resume builder"
-                    />
+                    /> */}
 
                 </div>
 
