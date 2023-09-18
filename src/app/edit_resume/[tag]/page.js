@@ -1,6 +1,6 @@
 'use client'
 import Style from "./edit.module.css";
-import Content_page from "../../all_resume_templates/resume_1/content_page";
+import Resume_1 from "../../all_resume_templates/resume_1/resume_1";
 import Resume_2 from "@/app/all_resume_templates/resume_2/resume_2";
 import { useParams } from 'next/navigation'
 import { Component } from "react";
@@ -9,8 +9,8 @@ const Edit = () => {
 
     let Edit_component
 
-    if (params.tag == "Content_page") {
-        Edit_component = Content_page
+    if (params.tag == "Resume_1") {
+        Edit_component = Resume_1
     } else if (params.tag == "Resume_2") {
         Edit_component = Resume_2
     } else {

@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Noto+Sans+Soyombo&family=Nunito:wght@500&display=swap');
 
 .container {
+    margin-bottom: 12px;
+
+
+}
+
+.name_wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,14 +20,19 @@
     letter-spacing: .2rem;
 }
 
-.position {
+.position_wrap {
     display: flex;
-    width: 96%;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
     border-top: solid;
     border-bottom: solid;
     border-color: rgb(67, 64, 64);
     border-style: double;
-    justify-content: center;
+}
+
+.position {
+
     padding: 10px 0px;
     font-size: 1.3rem;
     font-family: 'Nunito', sans-serif;

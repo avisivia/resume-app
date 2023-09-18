@@ -5,13 +5,21 @@ import { Editor } from 'react-editor'
 
 
 export default function Title() {
-    const [title, setTitle] = useState("")
+    const [title, setTitle] = useState(
+        [
+            {
+                name: "YOUR NAME",
+                position: "TEACHER (IT / ENGLISH)"
+            }
+        ]
+    )
     const placeholder = "YOUR NAME";
+    const position_placeholder = "TEACHER (IT / ENGLISH)"
 
     useEffect(() => {
         let old_user_data = JSON.parse(localStorage.getItem("TITLE"))
         if (old_user_data == null) {
-            localStorage.setItem("TITLE", JSON.stringify("YOUR NAME"))
+            localStorage.setItem("TITLE", JSON.stringify(title))
         } else {
             setTitle(old_user_data)
         }
@@ -20,21 +28,39 @@ export default function Title() {
 
     const handle_title = (event) => {
         let old_user_data = JSON.parse(localStorage.getItem("TITLE"))
-        old_user_data = event
+        old_user_data[0].name = event
+        localStorage.setItem("TITLE", JSON.stringify(old_user_data))
+    }
+    const handle_position = (event) => {
+        let old_user_data = JSON.parse(localStorage.getItem("TITLE"))
+        old_user_data[0].position = event
         localStorage.setItem("TITLE", JSON.stringify(old_user_data))
     }
 
     return (
         <div className={Style.container}>
-            <div className={Style.name}>
-                <Editor
-                    title={title}
-                    placeholder={placeholder}
-                    value={title}
-                    onChange={handle_title}
-                />
+            <div className={Style.name_wrap}>
+                <div className={Style.name}>
+                    <Editor
+                        title={title[0].name}
+                        placeholder={placeholder}
+                        value={title[0].name}
+                        onChange={handle_title}
+                    />
+                </div>
             </div>
-            <div className={Style.position}>TEACHER (IT / ENGLISH)</div>
+            <div className={Style.position_wrap}>
+                <div className={Style.position}>
+                    <div className={Style.position_text}>
+                        <Editor
+                            title={title[0].position}
+                            placeholder={position_placeholder}
+                            value={title[0].position}
+                            onChange={handle_position}
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
