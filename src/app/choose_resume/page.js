@@ -28,7 +28,7 @@ const Select = () => {
                     <a href="/edit_resume/Resume_1">
 
                         <img
-                            src="/home_page_image.webp"
+                            src="/resume.png"
                             alt="Resume builder"
                         />
                     </a>
