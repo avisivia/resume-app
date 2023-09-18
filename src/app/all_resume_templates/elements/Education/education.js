@@ -3,7 +3,7 @@ import Style from "@/app/all_resume_templates/elements/Education/education.modul
 import { Editor } from 'react-editor'
 import { useEffect, useState } from "react"
 import { PiStudentFill } from "react-icons/pi";
-
+import Home_Style from "@/app/all_resume_templates/elements/elements.module.css";
 
 export default function Education() {
 
@@ -119,11 +119,11 @@ export default function Education() {
     return (
         <div className={Style.container}>
             <div className={Style.title_wrap}>
-                <div className={Style.title}>
+                <div className={Home_Style.title}>
                     <PiStudentFill size={35} className={Style.icon} /><Editor
                         title={content[0].key}
                         placeholder={content[0].place_holder}
-                        className={Style.title}
+                        className={Home_Style.title}
                         value={content[0].key}
                         onChange={handleHeading}
                         onBlur={handle_heading_blur}

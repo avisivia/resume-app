@@ -8,10 +8,15 @@
     background-color: rgb(255, 255, 255);
 }
 
-.make_it_parallel {
+.container {
     display: flex;
     flex-direction: row;
+
 }
+
+/* .make_it_parallel {
+    
+} */
 
 @media print {
     .page_container {
