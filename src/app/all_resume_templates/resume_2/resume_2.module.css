@@ -1,0 +1,25 @@
+.page_container {
+    display: flex;
+    flex-direction: column;
+    min-width: 21cm;
+    min-height: 29.7cm;
+    padding: 10px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+.make_it_parallel {
+    display: flex;
+    flex-direction: row;
+}
+
+@media print {
+    .page_container {
+        color: red;
+    }
+}
+
+@page {
+    margin: 0cm;
+    size: A4 portrait;
+}

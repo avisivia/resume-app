@@ -1,11 +1,11 @@
-import Style from "@/app/all_resume_templates/resume_1/content_page.module.css";
+import Style from "@/app/all_resume_templates/resume_2/resume_2.module.css";
 import Education from "@/app/all_resume_templates/elements/Education/education";
 import Achievements from "@/app/all_resume_templates/elements/Achievements/achievements";
-import Title from "@/app/all_resume_templates/elements/Resume_title/title_1/title";
+import Title_2 from "@/app/all_resume_templates/elements/Resume_title/title_2/title_2";
 import Contact from "../elements/Contact/contact";
 import Summary from "../elements/Summary/summary";
 
-const Content_page = () => {
+export default function Resume_2() {
 
 
 
@@ -21,14 +21,10 @@ const Content_page = () => {
     return (
         <div className={Style.page_container}>
             <div className={Style.container}>
-                <div><Title /></div>
+                <div><Title_2 /></div>
                 <div className={Style.make_it_parallel}>
                     <div><Contact /></div>
                     <div><Summary /></div>
-                </div>
-                <div className={Style.make_it_parallel}>
-                    <div><Achievements /></div>
-                    <div><Education /></div>
                 </div>
 
 
@@ -36,5 +32,3 @@ const Content_page = () => {
         </div>
     );
 };
-
-export default Content_page;

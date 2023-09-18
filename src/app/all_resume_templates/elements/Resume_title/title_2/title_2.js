@@ -1,10 +1,10 @@
 'use state'
-import Style from "@/app/all_resume_templates/elements/Resume_title/title.module.css";
+import Style from "@/app/all_resume_templates/elements/Resume_title/title_2/title_2.module.css";
 import { useEffect, useState } from "react";
 import { Editor } from 'react-editor'
 
 
-export default function Title() {
+export default function Title_2() {
     const [title, setTitle] = useState("")
     const placeholder = "YOUR NAME";
 
@@ -33,8 +33,9 @@ export default function Title() {
                     value={title}
                     onChange={handle_title}
                 />
+                <div className={Style.position}>TEACHER (IT / ENGLISH)</div>
             </div>
-            <div className={Style.position}>TEACHER (IT / ENGLISH)</div>
+
         </div>
     )
 }

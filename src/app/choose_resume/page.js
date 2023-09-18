@@ -1,6 +1,10 @@
+
 import Style from "./select.module.css"
 import Image from "next/image";
+import Edit from "../edit_resume/[tag]/page";
+
 const Select = () => {
+
 
     return (
         <div className={Style.container}>
@@ -19,16 +23,19 @@ const Select = () => {
                 <div className={Style.body_title}>These resume templates are great for your role.
                     Which one would you like to start with?</div>
                 <div className={Style.templates}>
-                    <a href="/edit_resume">
+                    <a href="/edit_resume/Content_page">
+
                         <img
                             src="/home_page_image.webp"
                             alt="Resume builder"
                         />
                     </a>
-                    <img
-                        src="/home_page_image.webp"
-                        alt="Resume builder"
-                    />
+                    <a href="/edit_resume/Resume_2">
+                        <img
+                            src="/home_page_image.webp"
+                            alt="Resume builder"
+                        />
+                    </a>
                     <img
                         src="/home_page_image.webp"
                         alt="Resume builder"
