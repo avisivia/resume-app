@@ -13,6 +13,7 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: solid;
+    margin-bottom: 8px;
 
 }
 
@@ -28,4 +29,25 @@
 
 .icon {
     margin-right: 10px;
+}
+
+.email {
+    display: flex;
+    margin: 2px 0px;
+    align-items: center;
+
+
+}
+
+.phone {
+    display: flex;
+    margin: 2px 0px;
+    align-items: center;
+
+
+}
+
+.inner_text {
+    color: rgb(127, 128, 129);
+
 }

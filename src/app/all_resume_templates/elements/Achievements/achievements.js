@@ -15,6 +15,14 @@ export default function Achievements() {
                     <GiAchievement size={35} className={Style.icon} />ACHIEVEMENTS
                 </div>
             </div>
+            <div className={Style.achievement_wrap}>
+                <div className={Style.achievements}>
+                    <li>Employee of the Month, 2015</li>
+                    <li>Employee of the Month, 2015</li>
+                    <li>Employee of the Month, 2015</li>
+                </div>
+
+            </div>
         </div>
     )
 }
