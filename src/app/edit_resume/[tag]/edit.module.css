@@ -73,7 +73,7 @@
     flex-direction: row;
     color: black;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 100px;
     flex-wrap: wrap;
 
@@ -83,8 +83,15 @@
     transform: scale(1);
 } */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
     .edit_component {
-        transform: scale(.4);
+        transform: scale(.42);
+        margin-top: -320px;
+
+    }
+
+    .body {
+        justify-content: center;
+
     }
 }
