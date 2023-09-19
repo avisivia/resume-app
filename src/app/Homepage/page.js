@@ -15,7 +15,7 @@ const Homepage = () => {
 
                 <div className={Style.home_image}>
                     <img
-                        src="/home_page_image.webp"
+                        src="/resume_2.png"
                         alt="Resume builder"
                     />
                 </div>

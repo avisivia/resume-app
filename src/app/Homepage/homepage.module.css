@@ -3,6 +3,7 @@
     margin: 0 auto;
     flex-wrap: wrap;
     background: linear-gradient(135deg, #dfe6e9, #b2bec3);
+
 }
 
 .header {
@@ -87,6 +88,7 @@
     justify-content: space-between;
     margin: 0px 40px;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 
 }
 

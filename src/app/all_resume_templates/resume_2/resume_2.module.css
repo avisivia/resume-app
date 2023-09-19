@@ -1,16 +1,18 @@
 .page_container {
     display: flex;
     flex-direction: column;
-    min-width: 21cm;
+    width: 21cm;
     min-height: 29.7cm;
-    padding: 10px;
+    padding: 5px;
     color: black;
     background-color: rgb(255, 255, 255);
+
 }
 
 .make_it_parallel {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 @media print {
@@ -22,4 +24,15 @@
 @page {
     margin: 0cm;
     size: A4 portrait;
+}
+
+.contact {
+    width: 27%;
+    margin-top: 20px;
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+.about_me {
+    margin-top: 20px;
 }

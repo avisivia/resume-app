@@ -34,7 +34,7 @@ const Select = () => {
                     </a>
                     <a href="/edit_resume/Resume_2">
                         <img
-                            src="/home_page_image.webp"
+                            src="/resume_2.png"
                             alt="Resume builder"
                         />
                     </a>

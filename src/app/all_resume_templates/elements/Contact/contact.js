@@ -12,7 +12,8 @@ export default function Contact() {
     return (
         <div className={Style.container}>
             <div className={Style.title_wrap}>
-                <div className={Home_Style.title}><TiContacts size={35} className={Style.icon} /> CONTACT</div>
+                <div className={Home_Style.title}>
+                    <TiContacts size={35} className={Style.icon} /> CONTACT</div>
             </div>
             <div className={Style.email}>
                 <div className={Style.icon}>

@@ -40,7 +40,7 @@ const Edit = () => {
                 <div className={Style.menu}>
                     {/* menu */}
                 </div>
-                <div><Edit_component /></div>
+                <div className={Style.edit_component}><Edit_component /></div>
                 <div className={Style.options}>
                     {/* options */}
                 </div>

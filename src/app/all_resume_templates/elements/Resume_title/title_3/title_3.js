@@ -1,0 +1,66 @@
+'use state'
+import Style from "@/app/all_resume_templates/elements/Resume_title/title_3/title_3.module.css";
+import { useEffect, useState } from "react";
+import { Editor } from 'react-editor'
+
+
+export default function Title_3() {
+    const [title, setTitle] = useState(
+        [
+            {
+                name: "YOUR NAME",
+                position: "TEACHER (IT / ENGLISH)"
+            }
+        ]
+    )
+    const placeholder = "YOUR NAME";
+    const position_placeholder = "TEACHER (IT / ENGLISH)"
+
+    useEffect(() => {
+        let old_user_data = JSON.parse(localStorage.getItem("TITLE"))
+        if (old_user_data == null) {
+            localStorage.setItem("TITLE", JSON.stringify(title))
+        } else {
+            setTitle(old_user_data)
+        }
+
+    }, [1])
+
+    const handle_title = (event) => {
+        let old_user_data = JSON.parse(localStorage.getItem("TITLE"))
+        old_user_data[0].name = event
+        localStorage.setItem("TITLE", JSON.stringify(old_user_data))
+    }
+    const handle_position = (event) => {
+        let old_user_data = JSON.parse(localStorage.getItem("TITLE"))
+        old_user_data[0].position = event
+        localStorage.setItem("TITLE", JSON.stringify(old_user_data))
+    }
+
+    return (
+        <div className={Style.container}>
+            <div className={Style.title_wrap}>
+                <div className={Style.name}>
+                    <Editor
+                        title={title[0].name}
+                        placeholder={placeholder}
+                        value={title[0].name}
+                        onChange={handle_title}
+                    />
+                    <div className={Style.position}>
+                        <Editor
+                            title={title[0].position}
+                            placeholder={position_placeholder}
+                            value={title[0].position}
+                            onChange={handle_position}
+                        />
+                    </div>
+                </div>
+            </div>
+            <div className={Style.photo}>
+                <img src="/photo.png" />
+
+            </div>
+        </div>
+    )
+}

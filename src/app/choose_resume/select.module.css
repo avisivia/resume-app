@@ -59,6 +59,7 @@
     width: 100vw;
     margin: 0px 40px;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 @media (max-width: 600px) {
