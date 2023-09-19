@@ -38,26 +38,28 @@ export default function Title() {
     }
 
     return (
-        <div className={Style.container}>
-            <div className={Style.name_wrap}>
-                <div className={Style.name}>
-                    <Editor
-                        title={title[0].name}
-                        placeholder={placeholder}
-                        value={title[0].name}
-                        onChange={handle_title}
-                    />
-                </div>
-            </div>
-            <div className={Style.position_wrap}>
-                <div className={Style.position}>
-                    <div className={Style.position_text}>
+        <div className={Style.great}>
+            <div className={Style.container}>
+                <div className={Style.name_wrap}>
+                    <div className={Style.name}>
                         <Editor
-                            title={title[0].position}
-                            placeholder={position_placeholder}
-                            value={title[0].position}
-                            onChange={handle_position}
+                            title={title[0].name}
+                            placeholder={placeholder}
+                            value={title[0].name}
+                            onChange={handle_title}
                         />
+                    </div>
+                </div>
+                <div className={Style.position_wrap}>
+                    <div className={Style.position}>
+                        <div className={Style.position_text}>
+                            <Editor
+                                title={title[0].position}
+                                placeholder={position_placeholder}
+                                value={title[0].position}
+                                onChange={handle_position}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

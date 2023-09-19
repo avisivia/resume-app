@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    max-width: 300px;
     height: auto;
     margin: 5px;
     padding: 10px;
@@ -20,8 +20,8 @@
 
 .title {
     display: flex;
-    min-width: 250px;
     font-weight: 800;
+    max-width: 290px;
     font-size: x-large;
     margin-bottom: 2px;
 
