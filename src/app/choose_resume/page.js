@@ -2,6 +2,7 @@
 import Style from "./select.module.css"
 import Image from "next/image";
 import Edit from "../edit_resume/[tag]/page";
+import { BsPersonVcardFill } from "react-icons/bs";
 
 const Select = () => {
 
@@ -13,7 +14,7 @@ const Select = () => {
                     <div className={Style.logo}>
 
                         <div className={Style.logo_image}>
-                            {/* <img src="/vercel.svg" alt="Picture of the author" /> */}
+                            < BsPersonVcardFill size={30} color={"white"} />
                         </div>
                         <div className={Style.logo_text}>Resume Builder</div>
 

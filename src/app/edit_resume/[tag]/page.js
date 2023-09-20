@@ -2,8 +2,8 @@
 import Style from "./edit.module.css";
 import Resume_1 from "../../all_resume_templates/resume_1/resume_1";
 import Resume_2 from "@/app/all_resume_templates/resume_2/resume_2";
-import { useParams } from 'next/navigation'
-import { Component } from "react";
+import { useParams } from 'next/navigation';
+import { BsPersonVcardFill } from "react-icons/bs";
 const Edit = () => {
     const params = useParams()
 
@@ -25,7 +25,7 @@ const Edit = () => {
                     <div className={Style.logo}>
 
                         <div className={Style.logo_image}>
-                            {/* <img src="/vercel.svg" alt="Picture of the author" /> */}
+                            < BsPersonVcardFill size={30} color={"white"} />
                         </div>
                         <div className={Style.logo_text}>Resume Builder</div>
 

@@ -1,11 +1,12 @@
 import Style from "./homepage.module.css"
+import { BsPersonVcardFill } from "react-icons/bs";
 const Homepage = () => {
     return (
         <div className={Style.container}>
 
             <div className={Style.header}>
                 <div className={Style.logo}>
-                    <div className={Style.logo_image}><img src="/vercel.svg" alt="Resume Builder logo" /></div>
+                    <div className={Style.logo_image}>< BsPersonVcardFill size={30} /></div>
                     <div className={Style.logo_text}>Resume Builder</div>
                 </div>
                 <div className={Style.webbutton}><a href="/choose_resume"><button>Create Resume</button></a></div>
