@@ -4,7 +4,11 @@ import Resume_1 from "../../all_resume_templates/resume_1/resume_1";
 import Resume_2 from "@/app/all_resume_templates/resume_2/resume_2";
 import { useParams } from 'next/navigation';
 import { BsPersonVcardFill } from "react-icons/bs";
-const Edit = () => {
+import { FaFileDownload } from "react-icons/fa";
+
+
+function Edit() {
+
     const params = useParams()
 
     let Edit_component
@@ -16,6 +20,17 @@ const Edit = () => {
     } else {
         return (<>this page is not avalable yet</>)
     }
+
+    const handleprint = () => {
+        let printContent = document.getElementById('print').innerHTML;
+        var originalContent = document.body.innerHTML;
+        document.body.innerHTML = printContent;
+        window.print();
+        document.body.innerHTML = originalContent;
+
+    }
+
+
 
     return (
         <div className={Style.container}>
@@ -35,13 +50,23 @@ const Edit = () => {
             </div>
             <div className={Style.edit_heading}>
                 {/* A4 Size CV */}
+
+
             </div>
             <div className={Style.body}>
                 <div className={Style.menu}>
                     {/* menu */}
                 </div>
-                <div className={Style.edit_component}><Edit_component /></div>
-                <div className={Style.options}>
+                <div className={Style.edit_component}>
+                    <div className={Style.download_button} onClick={() => handleprint()}>
+                        <FaFileDownload size={30} />
+                    </div>
+                    <div className={Style.component} id="print">
+                        <Edit_component />
+                    </div>
+
+                </div>
+                <div className={Style.options} >
                     {/* options */}
                 </div>
 

@@ -95,3 +95,15 @@
 
     }
 }
+
+
+.edit_component {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.download_button {
+
+    position: absolute;
+    margin-right: -32px;
+}

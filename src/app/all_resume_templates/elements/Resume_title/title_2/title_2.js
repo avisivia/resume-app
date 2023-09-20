@@ -9,12 +9,12 @@ export default function Title_2() {
         [
             {
                 name: "YOUR NAME",
-                position: "TEACHER (IT / ENGLISH)"
+                position: "Position exp: Teacher, Singer"
             }
         ]
     )
     const placeholder = "YOUR NAME";
-    const position_placeholder = "TEACHER (IT / ENGLISH)"
+    const position_placeholder = "Position exp: Teacher, Singer"
 
     useEffect(() => {
         let old_user_data = JSON.parse(localStorage.getItem("TITLE"))

@@ -1,8 +1,6 @@
 .page_container {
     display: flex;
     flex-direction: column;
-    /* width: 21cm;
-    height: 29.7cm; */
     padding: 10px;
     color: black;
     background-color: rgb(255, 255, 255);
@@ -20,11 +18,13 @@
 
 @media print {
     .page_container {
-        color: red;
+        margin: auto;
     }
 }
 
 @page {
-    margin: 0cm;
+    width: 21cm;
+    height: 29.7cm;
     size: A4 portrait;
+    scale: 100%;
 }

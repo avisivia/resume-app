@@ -21,10 +21,10 @@ const Content_page = () => {
 
 
 
-
     return (
 
         <div className={Style.page_container}>
+
             <div><Title /></div>
             <div className={Style.container}>
 
