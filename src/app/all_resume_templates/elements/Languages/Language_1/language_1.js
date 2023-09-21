@@ -4,13 +4,13 @@ import Style from "@/app/all_resume_templates/elements/Languages/Language_1/lang
 import { BsFillChatSquareTextFill } from "react-icons/bs";
 import Home_Style from "@/app/all_resume_templates/elements/elements.module.css";
 
-export default function Language_1() {
+export default function Language_1(props) {
 
 
 
 
     return (
-        <div className={Style.container}>
+        <div className={Style.container} style={{ color: props.color_change }}>
             <div className={Style.title_wrap}>
                 <div className={Home_Style.title}>
                     <BsFillChatSquareTextFill size={22} className={Style.icon} />LANGUAGES

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { PiStudentFill } from "react-icons/pi";
 import Home_Style from "@/app/all_resume_templates/elements/elements.module.css";
 
-export default function Education() {
+export default function Education(props) {
 
     let [content, setContent] = useState([
 
@@ -117,7 +117,7 @@ export default function Education() {
 
 
     return (
-        <div className={Style.container}>
+        <div className={Style.container} style={{ color: props.color_change }}>
             <div className={Style.title_wrap}>
                 <div className={Home_Style.title}>
                     <PiStudentFill size={35} className={Style.icon} /><Editor

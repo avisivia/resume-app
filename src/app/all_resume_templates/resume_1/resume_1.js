@@ -1,3 +1,5 @@
+'use client'
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import Style from "@/app/all_resume_templates/resume_1/content_page.module.css";
 import Education from "@/app/all_resume_templates/elements/Education/education";
 import Achievements from "@/app/all_resume_templates/elements/Achievements/achievements";
@@ -8,43 +10,62 @@ import Skill_1 from "../elements/Skills/Skill_1/skill_1";
 import Language_1 from "../elements/Languages/Language_1/language_1";
 import Work_1 from "../elements/Work_experience/Work_1/work_1";
 import Reference_1 from "../elements/Reference/Reference_1/reference_1";
-import React from "react";
 import { BsFillCircleFill } from "react-icons/bs";
 
 const Content_page = React.forwardRef((props, ref) => {
-    const handle_color = (color) => {
-        console.log(color)
-    }
+
+    const [color, setColor] = useState("");
+    const colorRef = useRef();
+
+    useEffect(() => {
+        const previous_color = JSON.parse(localStorage.getItem('resume1_color'))
+        if (previous_color != null) {
+            colorRef.current = previous_color.current;
+            setColor(previous_color.current)
+
+        } else {
+            console.log("please select a color")
+        }
+
+    }, [1])
+
+
+    const handle_color = useCallback((color) => {
+        setColor(color);
+        colorRef.current = color;
+        localStorage.setItem("resume1_color", JSON.stringify(colorRef))
+    })
+
 
 
     return (
         <div className={Style.page_wrap}>
             <div className={Style.color}>
-                <li className={Style.black} onClick={() => handle_color("black")}><BsFillCircleFill size={25} /></li>
-                <li className={Style.gray} onClick={() => handle_color("rgb(50, 50, 50)")}><BsFillCircleFill size={25} /></li>
-                <li className={Style.blue} onClick={() => handle_color("rgb(0, 0, 102)")}><BsFillCircleFill size={25} /></li>
-                <li className={Style.orange} onClick={() => handle_color("rgb(207, 59, 0)")}><BsFillCircleFill size={25} /></li>
-                <li className={Style.green} onClick={() => handle_color("rgb(7, 66, 0)")}><BsFillCircleFill size={25} /></li>
+                <li className={Style.black} onClick={() => handle_color("black")}><BsFillCircleFill size={30} /></li>
+                <li className={Style.gray} onClick={() => handle_color("rgb(50, 50, 50)")}><BsFillCircleFill size={30} /></li>
+                <li className={Style.blue} onClick={() => handle_color("rgb(0, 0, 102)")}><BsFillCircleFill size={30} /></li>
+                <li className={Style.orange} onClick={() => handle_color("rgb(207, 59, 0)")}><BsFillCircleFill size={30} /></li>
+                <li className={Style.green} onClick={() => handle_color("rgb(7, 66, 0)")}><BsFillCircleFill size={30} /></li>
             </div>
 
             <div className={Style.page_container} ref={ref}>
 
-                <div><Title /></div>
+                <div><Title color_change={colorRef.current} /></div>
                 <div className={Style.container}>
 
                     <div className={Style.make_it_parallel}>
-                        <div><Contact /></div>
-                        <div><Skill_1 /></div>
-                        <div><Achievements /></div>
-                        <div><Language_1 /></div>
+                        <div><Contact color_change={colorRef.current} /></div>
+                        <div><Skill_1 color_change={colorRef.current} /></div>
+                        <div><Achievements color_change={colorRef.current} /></div>
+                        <div><Language_1 color_change={colorRef.current} /></div>
                     </div>
                     <div className={Style.make_it_parallel}>
-                        <div><Summary /></div>
-                        <div><Education /></div>
-                        <div><Work_1 /></div>
+                        <div><Summary color_change={colorRef.current} /></div>
+                        <div><Education color_change={colorRef.current} /></div>
+                        <div><Work_1 color_change={colorRef.current} /></div>
                     </div>
                 </div>
-                <Reference_1 />
+                <Reference_1 color_change={colorRef.current} />
             </div>
         </div>
 

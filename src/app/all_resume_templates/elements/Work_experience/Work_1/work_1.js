@@ -2,11 +2,11 @@
 import Style from "@/app/all_resume_templates/elements/Work_experience/Work_1/work_1.module.css";
 import { IoIosContact } from "react-icons/io";
 import Home_Style from "@/app/all_resume_templates/elements/elements.module.css";
-export default function Work_1() {
+export default function Work_1(props) {
 
 
     return (
-        <div className={Style.container}>
+        <div className={Style.container} style={{ color: props.color_change }}>
             <div className={Style.title_wrap}>
                 <div className={Home_Style.title}>
                     <IoIosContact size={35} className={Style.icon} />

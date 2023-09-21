@@ -10,25 +10,35 @@ const Resume_2 = React.forwardRef((props, ref) => {
     const [color, setColor] = useState("");
     const colorRef = useRef();
 
+    useEffect(() => {
+        const previous_color = JSON.parse(localStorage.getItem('resume2_color'))
+        if (previous_color != null) {
+            colorRef.current = previous_color.current;
+            setColor(previous_color.current)
+
+        } else {
+            console.log("please select a color")
+        }
+
+    }, [1])
+
 
     const handle_color = useCallback((color) => {
         setColor(color);
         colorRef.current = color;
+        localStorage.setItem("resume2_color", JSON.stringify(colorRef))
     })
 
 
 
     return (
         <div className={Style.page_wrap}>
-
             <div className={Style.color}>
-                <li className={Style.black} onClick={() => handle_color("black")}><BsFillCircleFill size={25} /></li>
-                <li className={Style.gray} onClick={() => handle_color("rgb(50, 50, 50)")}><BsFillCircleFill size={25} /></li>
-                <li className={Style.blue} onClick={() => handle_color("rgb(0, 0, 102)")}><BsFillCircleFill size={25} /></li>
-                <li className={Style.green} onClick={() => handle_color("rgb(7, 66, 0)")}><BsFillCircleFill size={25} /></li>
+                <li className={Style.black} onClick={() => handle_color("black")}><BsFillCircleFill size={30} /></li>
+                <li className={Style.gray} onClick={() => handle_color("rgb(50, 50, 50)")}><BsFillCircleFill size={30} /></li>
+                <li className={Style.blue} onClick={() => handle_color("rgb(0, 0, 102)")}><BsFillCircleFill size={30} /></li>
+                <li className={Style.green} onClick={() => handle_color("rgb(7, 66, 0)")}><BsFillCircleFill size={30} /></li>
             </div>
-
-
             <div className={Style.page_container} ref={ref}>
                 <div className={Style.container}>
 

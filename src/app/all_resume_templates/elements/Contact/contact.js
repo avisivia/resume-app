@@ -6,11 +6,11 @@ import { FaSquarePhone } from "react-icons/fa6";
 import Home_Style from "@/app/all_resume_templates/elements/elements.module.css";
 
 
-export default function Contact() {
+export default function Contact(props) {
 
 
     return (
-        <div className={Style.container}>
+        <div className={Style.container} style={{ color: props.color_change }}>
             <div className={Style.title_wrap}>
                 <div className={Home_Style.title}>
                     <TiContacts size={35} className={Style.icon} /> CONTACT</div>

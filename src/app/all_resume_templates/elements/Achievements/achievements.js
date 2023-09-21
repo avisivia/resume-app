@@ -3,13 +3,15 @@
 import Style from "@/app/all_resume_templates/elements/Achievements/achievements.module.css";
 import { GiAchievement } from "react-icons/gi";
 import Home_Style from "@/app/all_resume_templates/elements/elements.module.css";
-export default function Achievements() {
+
+export default function Achievements(props) {
+
 
 
 
 
     return (
-        <div className={Style.container}>
+        <div className={Style.container} style={{ color: props.color_change }}>
             <div className={Style.title_wrap}>
                 <div className={Home_Style.title}>
                     <GiAchievement size={35} className={Style.icon} />ACHIEVEMENTS

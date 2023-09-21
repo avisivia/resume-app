@@ -46,6 +46,16 @@
     margin: 20px;
 }
 
+@media only screen and (max-width: 550px) {
+    .color {
+        margin-bottom: 20px;
+
+
+    }
+
+
+}
+
 .blue {
     margin: 10px;
     color: rgb(0, 0, 102);

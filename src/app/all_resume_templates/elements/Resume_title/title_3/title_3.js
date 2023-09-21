@@ -6,10 +6,6 @@ import { Editor } from 'react-editor'
 
 export default function Title_3(props) {
 
-    console.log(props.color_change)
-
-
-
     const [title, setTitle] = useState(
         [
             {

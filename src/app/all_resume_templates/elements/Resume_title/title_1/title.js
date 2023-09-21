@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Editor } from 'react-editor'
 
 
-export default function Title() {
+export default function Title(props) {
     const [title, setTitle] = useState(
         [
             {
@@ -38,7 +38,7 @@ export default function Title() {
     }
 
     return (
-        <div className={Style.great}>
+        <div className={Style.great} style={{ color: props.color_change }}>
             <div className={Style.container}>
                 <div className={Style.name_wrap}>
                     <div className={Style.name}>
