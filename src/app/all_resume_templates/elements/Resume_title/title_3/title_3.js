@@ -6,6 +6,8 @@ import { Editor } from 'react-editor'
 
 export default function Title_3(props) {
 
+    console.log(props.color_change)
+
 
 
     const [title, setTitle] = useState(
@@ -41,8 +43,8 @@ export default function Title_3(props) {
     }
 
     return (
-        <div className={Style.container} style={{ color: props.change_color.current }}>
-            <div className={Style.title_wrap} style={{ backgroundColor: props.change_color.current }}>
+        <div className={Style.container} style={{ color: props.color_change }}>
+            <div className={Style.title_wrap} style={{ backgroundColor: props.color_change }}>
                 <div className={Style.name}>
                     <Editor
                         title={title[0].name}
@@ -61,7 +63,7 @@ export default function Title_3(props) {
                 </div>
             </div>
             <div className={Style.photo}>
-                <img src="/photo.png" />
+                <img src="/photo.png" style={{ borderColor: props.color_change }} />
 
             </div>
         </div>

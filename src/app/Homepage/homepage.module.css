@@ -44,15 +44,15 @@
 
 .logo_text {
     color: black;
-    font-size: 25px;
+    font-size: 1.563rem;
     width: 300px;
 
 
 }
 
 .webbutton {
-    min-width: 200px;
-    max-width: 20vw;
+    width: 200px;
+
 }
 
 
@@ -65,10 +65,10 @@
     color: white;
     padding: 8px 32px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     border-radius: 6px;
     margin: 20px;
-    min-width: 166px;
+    width: 166px;
 
 
 }
@@ -99,7 +99,7 @@
 }
 
 .landingtext {
-    font-size: 35px;
+    font-size: 2.188rem;
     width: 40vw;
     margin-left: 10vw;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -110,7 +110,7 @@
 @media (max-width: 650px) {
     .landingtext {
         margin-left: 0vw;
-        font-size: 20px;
+        font-size: 1.25rem;
         width: 80vw;
     }
 }
@@ -125,7 +125,7 @@
 .home_image {
     margin-right: 10vw;
     max-width: 30vw;
-    min-width: none;
+
     border: solid;
     border-radius: 0px;
     filter: drop-shadow(1px 2px 3px #2f2f2f);
@@ -136,7 +136,7 @@
     .home_image {
         margin-right: 0vw;
         max-width: 70vw;
-        min-width: none;
+
     }
 }
 
@@ -147,8 +147,8 @@
     color: white;
     padding: 8px 32px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     border-radius: 6px;
-    width: 150px;
+    width: 9.375rem;
     margin: 30px 0px 30px 0px;
 }

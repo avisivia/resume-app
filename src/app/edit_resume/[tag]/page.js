@@ -5,15 +5,14 @@ import Resume_2 from "@/app/all_resume_templates/resume_2/resume_2";
 import { useParams } from 'next/navigation';
 import { BsPersonVcardFill, BsFillCircleFill } from "react-icons/bs";
 import { FaFileDownload } from "react-icons/fa";
-import React, { useState } from "react";
+import React from "react";
 import ReactToPrint from "react-to-print";
 
 
 
 const Edit = () => {
 
-    const colorRef = React.useRef();
-    const [color, setColor] = useState()
+
 
 
 
@@ -29,14 +28,6 @@ const Edit = () => {
         Edit_component = Resume_2
     } else {
         return (<>this page is not avalable yet</>)
-    }
-    const handle_color = (event) => {
-        setColor(event)
-        if (event != "undefined") {
-            colorRef.current = event
-
-        }
-
     }
 
 
@@ -57,13 +48,9 @@ const Edit = () => {
                 </a>
                 <div className={Style.head_line}></div>
             </div>
-            <div className={Style.edit_heading}>
-                <li className={Style.black} onClick={() => handle_color("black")}><BsFillCircleFill size={25} /></li>
-                <li className={Style.gray} onClick={() => handle_color("rgb(50, 50, 50)")}><BsFillCircleFill size={25} /></li>
-                <li className={Style.blue} onClick={() => handle_color("rgb(0, 0, 102)")}><BsFillCircleFill size={25} /></li>
-                <li className={Style.orange} onClick={() => handle_color("rgb(194, 81, 0)")}><BsFillCircleFill size={25} /></li>
-                <li className={Style.green} onClick={() => handle_color("rgb(7, 66, 0)")}><BsFillCircleFill size={25} /></li>
-            </div>
+            {/* <div className={Style.edit_heading}>
+
+            </div> */}
             <div className={Style.body}>
                 <div className={Style.menu}>
                     {/* menu */}
@@ -73,11 +60,13 @@ const Edit = () => {
                         <ReactToPrint
                             trigger={() => <FaFileDownload size={30} />}
                             content={() => componentRef.current}
+
+
                         />
 
                     </div>
                     <div className={Style.component} >
-                        <Edit_component ref={componentRef} change_color={colorRef} />
+                        <Edit_component ref={componentRef} />
                     </div>
 
                 </div>
