@@ -5,9 +5,13 @@ import Resume_2 from "@/app/all_resume_templates/resume_2/resume_2";
 import { useParams } from 'next/navigation';
 import { BsPersonVcardFill } from "react-icons/bs";
 import { FaFileDownload } from "react-icons/fa";
+import React from "react";
+import ReactToPrint from "react-to-print";
 
 
-function Edit() {
+
+const Edit = () => {
+    const componentRef = React.useRef();
 
     const params = useParams()
 
@@ -21,14 +25,8 @@ function Edit() {
         return (<>this page is not avalable yet</>)
     }
 
-    const handleprint = () => {
-        let printContent = document.getElementById('print').innerHTML;
-        var originalContent = document.body.innerHTML;
-        document.body.innerHTML = printContent;
-        window.print();
-        document.body.innerHTML = originalContent;
 
-    }
+
 
 
 
@@ -50,30 +48,40 @@ function Edit() {
             </div>
             <div className={Style.edit_heading}>
                 {/* A4 Size CV */}
-
-
+                {/* <button onClick={handlePrint}>Print</button> */}
             </div>
             <div className={Style.body}>
                 <div className={Style.menu}>
                     {/* menu */}
                 </div>
                 <div className={Style.edit_component}>
-                    <div className={Style.download_button} onClick={() => handleprint()}>
-                        <FaFileDownload size={30} />
+                    <div className={Style.download_button}>
+                        <ReactToPrint
+                            trigger={() => <FaFileDownload size={30} />}
+                            content={() => componentRef.current}
+                        />
+
                     </div>
-                    <div className={Style.component} id="print">
-                        <Edit_component />
+                    <div className={Style.component} >
+                        <Edit_component ref={componentRef} />
                     </div>
 
                 </div>
                 <div className={Style.options} >
                     {/* options */}
+
                 </div>
+
+
 
             </div>
         </div>
 
     )
 }
+
+
+
+
 
 export default Edit;

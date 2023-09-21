@@ -23,8 +23,7 @@
 }
 
 @page {
-    width: 21cm;
-    height: 29.7cm;
+    /* width: 21rem;
+    height: 29.7rem; */
     size: A4 portrait;
-    scale: 100%;
 }

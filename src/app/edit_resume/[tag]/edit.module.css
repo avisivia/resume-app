@@ -106,4 +106,5 @@
 
     position: absolute;
     margin-right: -32px;
+    cursor: grabbing;
 }

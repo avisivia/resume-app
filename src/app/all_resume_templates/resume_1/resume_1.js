@@ -8,22 +8,14 @@ import Skill_1 from "../elements/Skills/Skill_1/skill_1";
 import Language_1 from "../elements/Languages/Language_1/language_1";
 import Work_1 from "../elements/Work_experience/Work_1/work_1";
 import Reference_1 from "../elements/Reference/Reference_1/reference_1";
+import React from "react";
 
-const Content_page = () => {
-
-
-
-
-
-
-
-
-
+const Content_page = React.forwardRef((props, ref) => {
 
 
     return (
 
-        <div className={Style.page_container}>
+        <div className={Style.page_container} ref={ref}>
 
             <div><Title /></div>
             <div className={Style.container}>
@@ -44,6 +36,6 @@ const Content_page = () => {
         </div>
 
     );
-};
+});
 
 export default Content_page;
