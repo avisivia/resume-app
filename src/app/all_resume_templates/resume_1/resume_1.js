@@ -38,4 +38,6 @@ const Content_page = React.forwardRef((props, ref) => {
     );
 });
 
+Content_page.displayName = 'Content_page';
+
 export default Content_page;

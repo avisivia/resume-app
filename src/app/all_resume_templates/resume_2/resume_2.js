@@ -24,5 +24,5 @@ const Resume_2 = React.forwardRef((props, ref) => {
     );
 });
 
-
+Resume_2.displayName = 'Resume_2';
 export default Resume_2;
