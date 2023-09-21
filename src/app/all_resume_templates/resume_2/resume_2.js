@@ -5,13 +5,15 @@ import React from 'react';
 
 const Resume_2 = React.forwardRef((props, ref) => {
 
+
+
     return (
         <div className={Style.page_container} ref={ref}>
             <div className={Style.container}>
 
                 <div className={Style.make_it_parallel}>
-                    <div><Title_3 /></div>
-                    <div className={Style.contact}><Contact /></div>
+                    <div><Title_3 change_color={props.change_color} /></div>
+                    <div className={Style.contact} style={{ backgroundColor: props.change_color.current }}><Contact /></div>
 
 
                 </div>

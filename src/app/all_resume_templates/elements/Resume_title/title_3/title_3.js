@@ -4,7 +4,10 @@ import { useEffect, useState } from "react";
 import { Editor } from 'react-editor'
 
 
-export default function Title_3() {
+export default function Title_3(props) {
+
+
+
     const [title, setTitle] = useState(
         [
             {
@@ -38,8 +41,8 @@ export default function Title_3() {
     }
 
     return (
-        <div className={Style.container}>
-            <div className={Style.title_wrap}>
+        <div className={Style.container} style={{ color: props.change_color.current }}>
+            <div className={Style.title_wrap} style={{ backgroundColor: props.change_color.current }}>
                 <div className={Style.name}>
                     <Editor
                         title={title[0].name}

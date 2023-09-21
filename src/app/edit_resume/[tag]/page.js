@@ -3,14 +3,20 @@ import Style from "./edit.module.css";
 import Resume_1 from "../../all_resume_templates/resume_1/resume_1";
 import Resume_2 from "@/app/all_resume_templates/resume_2/resume_2";
 import { useParams } from 'next/navigation';
-import { BsPersonVcardFill } from "react-icons/bs";
+import { BsPersonVcardFill, BsFillCircleFill } from "react-icons/bs";
 import { FaFileDownload } from "react-icons/fa";
-import React from "react";
+import React, { useState } from "react";
 import ReactToPrint from "react-to-print";
 
 
 
 const Edit = () => {
+
+    const colorRef = React.useRef();
+    const [color, setColor] = useState()
+
+
+
     const componentRef = React.useRef();
 
     const params = useParams()
@@ -23,6 +29,14 @@ const Edit = () => {
         Edit_component = Resume_2
     } else {
         return (<>this page is not avalable yet</>)
+    }
+    const handle_color = (event) => {
+        setColor(event)
+        if (event != "undefined") {
+            colorRef.current = event
+
+        }
+
     }
 
 
@@ -44,8 +58,11 @@ const Edit = () => {
                 <div className={Style.head_line}></div>
             </div>
             <div className={Style.edit_heading}>
-                {/* A4 Size CV */}
-                {/* <button onClick={handlePrint}>Print</button> */}
+                <li className={Style.black} onClick={() => handle_color("black")}><BsFillCircleFill size={25} /></li>
+                <li className={Style.gray} onClick={() => handle_color("rgb(50, 50, 50)")}><BsFillCircleFill size={25} /></li>
+                <li className={Style.blue} onClick={() => handle_color("rgb(0, 0, 102)")}><BsFillCircleFill size={25} /></li>
+                <li className={Style.orange} onClick={() => handle_color("rgb(194, 81, 0)")}><BsFillCircleFill size={25} /></li>
+                <li className={Style.green} onClick={() => handle_color("rgb(7, 66, 0)")}><BsFillCircleFill size={25} /></li>
             </div>
             <div className={Style.body}>
                 <div className={Style.menu}>
@@ -60,7 +77,7 @@ const Edit = () => {
 
                     </div>
                     <div className={Style.component} >
-                        <Edit_component ref={componentRef} />
+                        <Edit_component ref={componentRef} change_color={colorRef} />
                     </div>
 
                 </div>
