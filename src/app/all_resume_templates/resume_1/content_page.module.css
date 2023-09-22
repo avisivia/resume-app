@@ -39,15 +39,7 @@
     margin: 20px;
 }
 
-.blue {
-    margin: 10px;
-    color: rgb(0, 0, 102);
-    border: solid;
-    border-radius: 100%;
-    border-width: 2px;
-    border-color: white;
-    filter: drop-shadow(0px 1px 1px black);
-}
+
 
 .black {
     margin: 10px;
@@ -56,21 +48,9 @@
     border-radius: 100%;
     border-width: 2px;
     border-color: white;
-    filter: drop-shadow(0px 1px 1px black);
-
-
-}
 
 
 
-.green {
-    margin: 10px;
-    color: rgb(7, 66, 0);
-    border: solid;
-    border-radius: 100%;
-    border-width: 2px;
-    border-color: white;
-    filter: drop-shadow(0px 1px 1px black);
 }
 
 .gray {
@@ -80,10 +60,18 @@
     border-radius: 100%;
     border-width: 2px;
     border-color: white;
-    filter: drop-shadow(0px 1px 1px black);
+
 }
 
+.blue {
+    margin: 10px;
+    color: rgb(9 9 165);
+    border: solid;
+    border-radius: 100%;
+    border-width: 2px;
+    border-color: white;
 
+}
 
 
 .orange {
@@ -93,5 +81,15 @@
     border-radius: 100%;
     border-width: 2px;
     border-color: white;
-    filter: drop-shadow(0px 1px 1px black);
+
+}
+
+.green {
+    margin: 10px;
+    color: rgb(24 119 13);
+    border: solid;
+    border-radius: 100%;
+    border-width: 2px;
+    border-color: white;
+
 }

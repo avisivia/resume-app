@@ -37,8 +37,6 @@ const Content_page = React.forwardRef((props, ref) => {
         localStorage.setItem("resume1_color", JSON.stringify(colorRef))
     })
 
-
-
     return (
         <div className={Style.page_wrap}>
             <div className={Style.color}>
@@ -48,14 +46,14 @@ const Content_page = React.forwardRef((props, ref) => {
                 <li className={Style.gray} onClick={() => handle_color("rgb(50, 50, 50)")}>
                     {color == "rgb(50, 50, 50)" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
                 </li>
-                <li className={Style.blue} onClick={() => handle_color("rgb(0, 0, 102)")}>
-                    {color == "rgb(0, 0, 102)" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
+                <li className={Style.blue} onClick={() => handle_color("rgb(9 9 165)")}>
+                    {color == "rgb(9 9 165)" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
                 </li>
                 <li className={Style.orange} onClick={() => handle_color("rgb(207, 59, 0)")}>
                     {color == "rgb(207, 59, 0)" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
                 </li>
-                <li className={Style.green} onClick={() => handle_color("rgb(7, 66, 0)")}>
-                    {color == "rgb(7, 66, 0)" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
+                <li className={Style.green} onClick={() => handle_color("rgb(24 119 13)")}>
+                    {color == "rgb(24 119 13)" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
                 </li>
             </div>
 
