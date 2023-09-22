@@ -18,6 +18,7 @@ const Content_page = React.forwardRef((props, ref) => {
     const [color, setColor] = useState("");
     const colorRef = useRef();
 
+
     useEffect(() => {
         const previous_color = JSON.parse(localStorage.getItem('resume1_color'))
         if (previous_color != null) {

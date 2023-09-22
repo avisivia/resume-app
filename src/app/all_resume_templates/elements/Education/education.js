@@ -12,6 +12,7 @@ export default function Education(props) {
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
 
+
     let [content, setContent] = useState([
 
         {
