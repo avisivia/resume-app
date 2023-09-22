@@ -4,8 +4,13 @@ import { Editor } from 'react-editor'
 import { useEffect, useState } from "react"
 import { PiStudentFill } from "react-icons/pi";
 import Home_Style from "@/app/all_resume_templates/elements/elements.module.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function Education(props) {
+
+    const [startDate, setStartDate] = useState(new Date());
+    const [endDate, setEndDate] = useState(new Date());
 
     let [content, setContent] = useState([
 
@@ -17,11 +22,20 @@ export default function Education(props) {
             "field_content": "",
             "field_place_holder": "Write your study field",
             "university_content": "",
-            "university_place_holder": "School or University Name"
+            "university_place_holder": "School or University Name",
+            "start_date": startDate.toString(),
+            "end_date": endDate.toString(),
+
         },
     ])
 
-    useEffect(() => {                                                 // useEffect will check if there is any data in localstorage. If there is any data in the local storage, useEffect will get it and reflect that on the CV. Other wise will create a default data.
+
+    useEffect(() => {
+        reload()                                              // useEffect will check if there is any data in localstorage. If there is any data in the local storage, useEffect will get it and reflect that on the CV. Other wise will create a default data.
+
+    }, [1])
+
+    const reload = () => {
         try {
             let user_old_data = JSON.parse(localStorage.getItem("EDUCATION"))
             if (user_old_data == null) {
@@ -35,7 +49,8 @@ export default function Education(props) {
 
         }
 
-    }, [1])
+
+    }
 
     const handleHeading = (event) => {
         try {
@@ -89,6 +104,34 @@ export default function Education(props) {
         }
     }
 
+    const handle_start_date = (event, index) => {
+        try {
+            setStartDate(event)
+            let user_old_data = JSON.parse(localStorage.getItem("EDUCATION"))   // Getting data from local storage
+            let new_value = event.toString()
+            user_old_data[index].start_date = new_value
+            localStorage.setItem("EDUCATION", JSON.stringify(user_old_data))   // Storing new data to local storage
+            reload()
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const handle_end_date = (event, index) => {
+        try {
+            setEndDate(event)
+            let user_old_data = JSON.parse(localStorage.getItem("EDUCATION"))   // Getting data from local storage
+            let new_value = event.toString()
+            user_old_data[index].end_date = new_value
+            localStorage.setItem("EDUCATION", JSON.stringify(user_old_data))   // Storing new data to local storage
+            reload()
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     const handle_add_element = () => {
         let user_old_data = JSON.parse(localStorage.getItem('EDUCATION'))
         let newField =
@@ -96,7 +139,9 @@ export default function Education(props) {
             "field_content": "",
             "field_place_holder": "Write your study field",
             "university_content": "",
-            "university_place_holder": "School or University Name"
+            "university_place_holder": "School or University Name",
+            "start_date": startDate.toString(),
+            "end_date": endDate.toString(),
         }
         user_old_data.push(newField)                        // Pushing new fields in local storage variable
         setContent(user_old_data)                           // Pushing new fieds in useState
@@ -159,6 +204,19 @@ export default function Education(props) {
                                     value={item.university_content}
                                     onChange={(e) => handle_University(e, index)}
                                 />
+                                <div className={Style.date}>
+                                    <DatePicker
+                                        selected={new Date(item.start_date)}
+
+                                        onChange={(date) => handle_start_date(date, index)}
+
+                                    />
+                                    <div className={Style.to}>-</div>
+
+                                    <DatePicker
+                                        selected={new Date(item.end_date)}
+                                        onChange={(date) => handle_end_date(date, index)}
+                                    /></div>
                             </div>
                             <div><button onClick={() => handle_delete_element(index)} className={Style.delete_button}>-</button></div>
 
