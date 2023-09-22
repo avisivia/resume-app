@@ -2,7 +2,7 @@ import Style from "@/app/all_resume_templates/resume_2/resume_2.module.css";
 import Title_3 from "../elements/Resume_title/title_3/title_3";
 import Contact from "../elements/Contact/contact";
 import React, { useRef, useState, useCallback, useEffect } from 'react';
-import { BsFillCircleFill } from "react-icons/bs";
+import { BsFillCircleFill, BsFillCheckCircleFill } from "react-icons/bs";
 
 
 const Resume_2 = React.forwardRef((props, ref) => {
@@ -34,10 +34,18 @@ const Resume_2 = React.forwardRef((props, ref) => {
     return (
         <div className={Style.page_wrap}>
             <div className={Style.color}>
-                <li className={Style.black} onClick={() => handle_color("black")}><BsFillCircleFill size={30} /></li>
-                <li className={Style.gray} onClick={() => handle_color("rgb(50, 50, 50)")}><BsFillCircleFill size={30} /></li>
-                <li className={Style.blue} onClick={() => handle_color("rgb(0, 0, 102)")}><BsFillCircleFill size={30} /></li>
-                <li className={Style.green} onClick={() => handle_color("rgb(7, 66, 0)")}><BsFillCircleFill size={30} /></li>
+                <li className={Style.black} onClick={() => handle_color("black")}>
+                    {color == "black" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
+                </li>
+                <li className={Style.gray} onClick={() => handle_color("rgb(50, 50, 50)")}>
+                    {color == "rgb(50, 50, 50)" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
+                </li>
+                <li className={Style.blue} onClick={() => handle_color("rgb(0, 0, 102)")}>
+                    {color == "rgb(0, 0, 102)" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
+                </li>
+                <li className={Style.green} onClick={() => handle_color("rgb(7, 66, 0)")}>
+                    {color == "rgb(7, 66, 0)" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
+                </li>
             </div>
             <div className={Style.page_container} ref={ref}>
                 <div className={Style.container}>

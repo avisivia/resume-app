@@ -58,7 +58,7 @@ const Edit = () => {
                 <div className={Style.edit_component}>
                     <div className={Style.download_button}>
                         <ReactToPrint
-                            trigger={() => <FaFileDownload size={30} />}
+                            trigger={() => <FaFileDownload size={40} />}
                             content={() => componentRef.current}
 
 

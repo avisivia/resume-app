@@ -86,7 +86,7 @@
 
 @media only screen and (max-width: 550px) {
     .edit_component {
-        transform: scale(.42);
+        transform: scale(.38);
         margin-top: -320px;
 
     }
@@ -105,7 +105,7 @@
 
 .download_button {
 
-    margin-top: 89px;
+    margin-top: 94px;
 }
 
 

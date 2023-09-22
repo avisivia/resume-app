@@ -10,7 +10,8 @@ import Skill_1 from "../elements/Skills/Skill_1/skill_1";
 import Language_1 from "../elements/Languages/Language_1/language_1";
 import Work_1 from "../elements/Work_experience/Work_1/work_1";
 import Reference_1 from "../elements/Reference/Reference_1/reference_1";
-import { BsFillCircleFill } from "react-icons/bs";
+import { BsFillCircleFill, BsFillCheckCircleFill } from "react-icons/bs";
+import { NodeNextRequest } from "next/dist/server/base-http/node";
 
 const Content_page = React.forwardRef((props, ref) => {
 
@@ -41,11 +42,21 @@ const Content_page = React.forwardRef((props, ref) => {
     return (
         <div className={Style.page_wrap}>
             <div className={Style.color}>
-                <li className={Style.black} onClick={() => handle_color("black")}><BsFillCircleFill size={30} /></li>
-                <li className={Style.gray} onClick={() => handle_color("rgb(50, 50, 50)")}><BsFillCircleFill size={30} /></li>
-                <li className={Style.blue} onClick={() => handle_color("rgb(0, 0, 102)")}><BsFillCircleFill size={30} /></li>
-                <li className={Style.orange} onClick={() => handle_color("rgb(207, 59, 0)")}><BsFillCircleFill size={30} /></li>
-                <li className={Style.green} onClick={() => handle_color("rgb(7, 66, 0)")}><BsFillCircleFill size={30} /></li>
+                <li className={Style.black} onClick={() => handle_color("black")}>
+                    {color == "black" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
+                </li>
+                <li className={Style.gray} onClick={() => handle_color("rgb(50, 50, 50)")}>
+                    {color == "rgb(50, 50, 50)" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
+                </li>
+                <li className={Style.blue} onClick={() => handle_color("rgb(0, 0, 102)")}>
+                    {color == "rgb(0, 0, 102)" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
+                </li>
+                <li className={Style.orange} onClick={() => handle_color("rgb(207, 59, 0)")}>
+                    {color == "rgb(207, 59, 0)" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
+                </li>
+                <li className={Style.green} onClick={() => handle_color("rgb(7, 66, 0)")}>
+                    {color == "rgb(7, 66, 0)" ? (<BsFillCheckCircleFill size={30} />) : (<BsFillCircleFill size={30} />)}
+                </li>
             </div>
 
             <div className={Style.page_container} ref={ref}>
